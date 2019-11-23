@@ -1,0 +1,19 @@
+<div>
+    <div>
+        Titulo: <input type="text" [(ngModel)]="oTareas.Titulo" >
+    </div>
+    <div>
+        Descripción: <input [(ngModel)]="oTareas.Descripcion" type="text">
+    </div>
+    <div>
+        Fecha:
+        <ngb-datepicker #dp [(ngModel)]="oTareas.Fecha" ></ngb-datepicker>
+    </div>
+    <div style="text-align: center" >
+        <button (click)="AgregarTarea()" >
+            <i class="material-icons">
+                check_circle
+            </i>
+        </button>
+    </div>
+</div>

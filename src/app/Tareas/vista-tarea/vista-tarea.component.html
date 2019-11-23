@@ -1,0 +1,59 @@
+<p>
+  TODO
+</p>
+
+<button style="cursor: pointer" (click)="openModaTarea(content)">
+  <i class="material-icons">
+    note_add
+  </i>
+</button>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Titulo</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tarea of lTareas">
+      <td>{{ tarea.ID }}</td>
+      <td>{{ tarea.Titulo }}</td>
+      <td>
+        <button style="cursor: pointer;" (click)="editarTarea(tarea)" >
+          <i class="material-icons">
+            edit
+          </i>
+        </button>
+      </td>
+      <td>
+        <button style="cursor: pointer;" (click)="eliminarTarea(tarea)">
+          <i class="material-icons">
+              delete
+          </i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <!-- <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button> -->
+  </div>
+  <div class="modal-body">
+    <p>Hello, World!</p>
+  </div>
+  <div class="modal-footer">
+    <!-- <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button> -->
+    <button>Guardar</button>
+  </div>
+</ng-template>
